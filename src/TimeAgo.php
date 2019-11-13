@@ -4,10 +4,10 @@
  *
  * Time ago twig filter
  *
- * @link      https://github.com/mediabeastnz
- * @copyright Copyright (c) 2019 Myles Derham
+ * @link      https://github.com/dmsylvio
+ * @copyright Copyright (c) 2019 Sylvio Neto
  */
-namespace mediabeastnz\timeago;
+namespace dmsylvio\timeago;
 
 use Craft;
 use craft\base\Plugin;
@@ -20,7 +20,7 @@ use yii\base\Event;
 /**
  * Class TimeAgo
  *
- * @author    Myles Derham
+ * @author    Sylvio Neto
  * @package   TimeAgo
  * @since     1.0.0
  *
@@ -78,23 +78,23 @@ class TwigExtensionDate extends \Twig_Extension
     public $units_translated = array();
 
     static $units = array(
-        'y' => 'year',
-        'm' => 'month',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
+        'y' => 'ano',
+        'm' => 'mês',
+        'd' => 'dia',
+        'h' => 'hora',
+        'i' => 'minuto',
+        's' => 'segundo',
     );
 
     function __construct()
     {
         $this->units_translated = array(
-            'y' => Craft::t('app','year'),
-            'm' => Craft::t('app','month'),
-            'd' => Craft::t('app','day'),
-            'h' => Craft::t('app','hour'),
-            'i' => Craft::t('app','minute'),
-            's' => Craft::t('app','second'),
+            'y' => Craft::t('app','ano'),
+            'm' => Craft::t('app','mês'),
+            'd' => Craft::t('app','dia'),
+            'h' => Craft::t('app','hora'),
+            'i' => Craft::t('app','minuto'),
+            's' => Craft::t('app','segundo'),
         );
     }
 
