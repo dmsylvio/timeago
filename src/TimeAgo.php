@@ -185,12 +185,15 @@ class TwigExtensionDate extends \Twig_Extension
 
     protected function getPluralizedInterval($count, $invert, $unit)
     {
-
         if ($count > 1) {
-            $unit .= 's';
+            if($unit == 'mês'){
+                $unit = 'meses';
+            }else{
+                $unit .= 's';
+            }
         }
-
-        return $invert ? "in $count $unit" : "$count $unit ago";
+        
+        return $invert ? "in $count $unit" : "$count $unit atrás";
     }
 
     protected function getPluralizedIntervalArray($count, $invert, $unit)
